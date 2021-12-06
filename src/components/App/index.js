@@ -1,5 +1,5 @@
-mport React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { open } from "../../utils/indexdb";
 import Home from "../Home";
@@ -19,6 +19,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    debugger;
     open()
       .then(() => {
         this.setState({
@@ -26,7 +27,7 @@ class App extends React.Component {
         });
       })
       .catch(() => {
-        console.error("Помилка");
+        console.error("SomeError");
       });
   }
 
